@@ -21,5 +21,10 @@
             </div>";
     });
 
+    $app->get("/parcels", function() {
+        $new_parcel = new Parcel($_GET["weight"],$_GET["dimensions"]);
+        "<p> your parcel weights" . $new_parcel->weight . "</p>";
+    });
+
     return $app;
 ?>
